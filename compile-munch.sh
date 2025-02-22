@@ -7,7 +7,7 @@ SUBARCH="arm64"
 DEFCONFIG=nogravity-${PHONE}_defconfig
 COMPILER=clang
 LINKER="lld"
-COMPILERDIR="/media/pierre/Expension/Android/PocoX3Pro/Kernels/Proton-Clang"
+COMPILERDIR="aosp-clang-17.0.0"
 
 # Copy gpu dtsi
 cp arch/arm64/boot/dts/vendor/qcom/kona-v2-gpu-xxxx/kona-v2-gpu-alioth.dtsi arch/arm64/boot/dts/vendor/qcom/kona-v2-gpu.dtsi
@@ -22,8 +22,8 @@ cp touch_fw/* drivers/input/touchscreen/focaltech_touch/include/pramboot/
 rm -rf out/outputs/${PHONE}/*
 
 # Export shits
-export KBUILD_BUILD_USER=Pierre2324
-export KBUILD_BUILD_HOST=G7-7588
+export KBUILD_BUILD_USER=Bakskutz
+export KBUILD_BUILD_HOST=Lab
 
 # Speed up build process
 MAKE="./makeparallel"
